@@ -1,0 +1,16 @@
+<p><a href="<?php echo $this->url(
+    array(
+        'controller' => 'user',
+        'action'     => 'index',
+    	'module' => 'default'
+    ),
+    'default',
+    true) ?>">Test users</a></p>
+
+My users: <br />
+<dl>
+    <?php foreach ($this->entries as $entry): ?>
+    <dt><?php echo $this->escape($entry->nume_doctor) ?></dt>
+    <dd><?php echo $this->escape($entry->specialitate) ?></dd>
+    <?php endforeach ?>
+</dl>

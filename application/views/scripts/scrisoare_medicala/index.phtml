@@ -1,0 +1,17 @@
+<p><a href="<?php echo $this->url(
+		
+    array(
+        'controller' => 'scrisoareMedicala',
+        'action'     => 'index',
+    	'module' => 'default'
+    ),
+    'default',
+    true) ?>">Test Scrisoare medicala</a></p>
+
+Scrisori medicale: <br />
+<dl>
+    <?php foreach ($this->entries as $entry):?>
+    <dt><?php echo $this->escape($entry->scrisoare_medicala) ?></dt>
+    <dd><?php echo $this->escape($entry->id_user) ?></dd>
+    <?php endforeach ?>
+</dl>
